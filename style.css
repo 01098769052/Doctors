@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+*{
+    font-family: 'cairo';
+    box-sizing: border-box; /* علشان لو خدت padding or margin  متقصرش علي اللي جوا ال header*/
+    padding:0px;
+    margin: 0px;
+}
+
+header{
+    display: flex;  /* علشان لو هحط أكتر من حاجه علي سطر واحد */
+    justify-content: space-between; /* علشان اعمل مسافه بين الحاجات اللي انا عملتها علي سكر واحد ولازم display:flex علشان استخدمها */
+    align-items: center; /* علشان اخلي الحاجات محطوطه علي السطر من النص */
+    background-color: #2c3e50; /*علشان ادي خلفيه ل ال header */
+    color: white; /*علشان ادي خلفيه ل الكلام اللي جوا ال header ب استثناء ال a*/
+    padding: 0px 100px; /*علشان ازق ال items  اللي في ال header من اليمين و الشمال 100px  و من فوق و تحت 10 px*/
+    border-top: solid crimson;/* عمل اطار من فوق لونه crimson  1px و السمك بتاعه */
+    position: fixed; /* to make the header fixed don't chaange with scroll */
+    width: 100%; /* neccesery with positin fixed*/
+}
+header a{
+    color: white;/*to make color of words ehite*/
+    text-decoration: none; /* to erase lines under words*/
+    margin-right: 16px; /*to make a space between every (a) 10px */
+    font-size: 20px;/*to make font size 18px*/
+    transition: ease 1s; /*to late action that will happen after 1s*/
+}
+header a:hover{
+    color:#1abc9c; /* color of font after hover 1abc9c*/
+    font-size: 21px;/*to make font size after hover 20px */
+}
+
+
+
+.carsoul{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image: url(images/background.jpg);
+    background-size: cover;/*بقول ل الصوره تظبط نفسها علي قد ال div بتاعها*/
+    background-attachment: fixed; /*for image stay constant when i scroll*/
+    background-blend-mode: overlay; /*علشان اخلي الصوره لونها غامق*/
+    background-color: rgba(0, 0, 0, .5);/*to select color of overlay*/
+    background-position: center;/* to make the img in center*/
+}
+.carsoul h2{
+    color: #2c3e50;
+}
+.carsoul div {
+    margin-left: 80px;
+}
+.carsoul span{
+    color: crimson;
+}
+.carsoul a{
+    color: white;
+    text-decoration: none;
+    background-color: #1abc9c;
+    border-radius: 7px;
+    padding:10px;
+    display: inline-block; /*to make a suitable size block*/
+    margin-top: 10px; 
+    transition: ease 1s; /*to late action that will happen after 1s*/
+}
+.carsoul a:hover{
+    transform:scale(1.1);  
+    background-color:#2c3e50 ;
+}
+
+
+
+.services h2{
+    text-align: center;
+    margin: 30px 0px;
+}
+.services .container{
+    display: flex; 
+    justify-content: center;
+    padding: 0px 80px;
+    flex-wrap: wrap; /*علشان يوزع ال cards  علي قد السطر */
+}
+.services .cards{
+    margin-right: 45px;
+    box-shadow: 3px 3px 6px 6px #ccc; /* to make shadow around each card*/
+    padding:10px;
+    width: 17em; /* علشان بنعملها لما بنستخدم ال flex-warp علشان ننظم حجم ال cards بحيث يبقي 3 cards علي كل سكر*/
+    margin-bottom: 40px;
+}
+.cards h3{
+    text-align: center;
+    color: crimson;
+    font-weight: 1000;
+}
+.cards p{
+    font-size: 14px;
+    text-align: center;
+}
+.services .cards>div{
+    font-size: 50px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+
+
+.protofilio{
+    background-color: #2c3e50;
+    text-align: center;
+    padding:30px 100px;
+}
+.protofilio .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.protofilio h2{
+    color: white; 
+    margin-bottom: 40px;
+    border-bottom: solid crimson; /* to make line uder word*/
+    display: inline-block; /*to make suitable for line nesccsery before*/ 
+}
+.protofilio .cards{
+    border: solid;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 22px; 
+    padding-bottom: 10px;
+    width: 18em;
+    margin-bottom: 30px;
+    overflow: hidden; /*make hidden for adding*/
+    min-height: 300px; /*to make suitable height for cards*/
+}
+.protofilio button{
+    border-radius: 10px;
+    color: white;
+    background-color: #1abc9c;
+    padding:0px 8px;
+    border: none;
+}
+.protofilio .card-desc{
+    margin: 0px 10px;
+}
+.protofilio .card-desc p{
+    font-size: 14px;
+    line-height: 1.32;
+    font-weight: 700;
+}
+.protofilio .card-desc button{
+   /* flex-shrink: 0; /*تمنع انكماش ال button*/
+    align-self: end;/*to put button at end */
+    margin-left: 10px;
+    font-weight: 700;
+}
+.protofilio img{
+    height: 12em;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.notilla{
+    display: flex;
+    padding: 50px 100px;
+    align-items: center;
+}
+.notilla .notilla-desc{
+    width: 60%;
+    text-align: center;
+}
+.notilla h2{
+    color: crimson;
+}
+.notilla p{
+    font-size: 17px;
+}
+.notilla .notilla-img{
+    width: 40%;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgb( 0 0 0/40%);
+}
+.notilla .notilla-img{
+    width: 750px;
+    min-height: 500px; 
+}
+
+
+
+.about{
+    padding: 100px 100px;
+    background-image: url(images/bg.jpg);
+    min-height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-blend-mode:overlay ;
+    background-color: rgba(0, 0, 0, .2);
+    
+}
+.about >div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.about img{
+    border: solid #ccc;
+border-radius: 50%;
+height: 20em;
+width: 20em;
+margin-bottom: 20px;
+margin-right: 20px;
+object-fit: cover;
+}
+.about h2{
+    
+    color: white;
+    border-bottom: solid crimson;
+    display: inline-block;
+
+}
+
+
+
+
